@@ -68,41 +68,41 @@ export default class Player {
       this.sprite.y + 32);
     //console.log(this.isPewStriding + " " + blockBelow);
     const { keys, sprite } = this;
-    const onGround = sprite.body.blocked.down;
+    const onGround = this.sprite.body.blocked.down;
     const acceleration = (onGround ? (this.isPewStriding ? 1200 :600) : 200);
 
     if (this.isPewStriding)
     {
-      sprite.setMaxVelocity(600, 800);
+      this.sprite.setMaxVelocity(600, 800);
       //console.log("pew striding");
     }
     else {
-      sprite.setMaxVelocity(300, 400);
+      this.sprite.setMaxVelocity(300, 400);
       //console.log("not pew striding");
     }
       //console.log(acceleration);
     // Apply horizontal acceleration when left/a or right/d are applied
     if (keys.left.isDown || keys.a.isDown) {
-      sprite.setAccelerationX(-acceleration);
-      sprite.anims.play('walk', true);
-      sprite.setFlipX(true);
+      this.sprite.setAccelerationX(-acceleration);
+      this.sprite.anims.play('walk', true);
+      this.sprite.setFlipX(true);
     }
     else if (keys.right.isDown || keys.d.isDown)
     {
-      sprite.setAccelerationX(acceleration);
-      sprite.setFlipX(false);
-      sprite.anims.play('walk', true);
+      this.sprite.setAccelerationX(acceleration);
+      this.sprite.setFlipX(false);
+      this.sprite.anims.play('walk', true);
     }
     else
     {
       //if (sprite.y<worldgetTileAt(player))
-      sprite.setAccelerationX(0);
-      sprite.anims.play('still', true);
+      this.sprite.setAccelerationX(0);
+      this.sprite.anims.play('still', true);
     }
 
     // Only allow the player to jump if they are on the ground
     if (onGround && (keys.up.isDown || keys.w.isDown)) {
-      sprite.setVelocityY(this.isPewStriding ? -700 : -500);
+      this.sprite.setVelocityY(this.isPewStriding ? -700 : -500);
     }
 
 

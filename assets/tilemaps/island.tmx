@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.1" orientation="orthogonal" renderorder="right-down" width="144" height="265" tilewidth="16" tileheight="16" infinite="1" nextlayerid="7" nextobjectid="11">
+<map version="1.4" tiledversion="1.4.1" orientation="orthogonal" renderorder="right-down" width="144" height="265" tilewidth="16" tileheight="16" infinite="1" nextlayerid="7" nextobjectid="14">
  <editorsettings>
   <export target="island.json" format="json"/>
  </editorsettings>
  <tileset firstgid="1" name="tiles_1bit_32x32" tilewidth="16" tileheight="16" tilecount="4096" columns="64">
-  <image source="../../../pewstrider/assets/tilesets/tiles_1bit_32x32.png" trans="ff00ff" width="1024" height="1024"/>
+  <image source="../tilesets/tiles_1bit_32x32.png" trans="ff00ff" width="1024" height="1024"/>
   <tile id="0">
    <properties>
     <property name="collides" type="bool" value="true"/>
@@ -26596,5 +26596,11 @@
    <point/>
   </object>
   <object id="9" name="sign1Spawn" gid="411" x="1968" y="3536" width="32" height="16"/>
+  <object id="11" name="tabernacleSpawn" x="1776" y="480">
+   <point/>
+  </object>
+  <object id="12" name="sanctuaryLamp1Spawn" x="1696" y="288">
+   <point/>
+  </object>
  </objectgroup>
 </map>
